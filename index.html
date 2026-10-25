@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1f6b45">
+<title>Panduan Umrah Mandiri</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+
+<!-- LOGIN -->
+<section id="login" class="login">
+  <form id="loginForm" class="card loginbox" autocomplete="on">
+    <h1 id="loginTitle">Panduan Umrah Mandiri</h1>
+    <p class="meta">Masuk untuk membuka panduan.</p>
+    <label>Username <input id="lu" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required></label>
+    <label>Password <input id="lp" name="password" type="password" autocomplete="current-password" required></label>
+    <label class="inl"><input type="checkbox" id="showpw"> Tampilkan password</label>
+    <button id="lbtn" class="btn" type="submit">Masuk</button>
+    <p id="lerr" class="msgline err" role="alert"></p>
+    <p class="meta">Lupa password? Hubungi admin untuk reset.</p>
+  </form>
+</section>
+
+<!-- APLIKASI -->
+<div id="app" hidden>
+  <header class="top">
+    <div class="wrap">
+      <div class="headgrid">
+        <div class="headtxt">
+          <h1 id="judul">Panduan Umrah Mandiri</h1>
+          <p id="subjudul"></p>
+        </div>
+        <aside id="surah" class="surah" hidden aria-label="Surah"></aside>
+      </div>
+      <div class="tools">
+        <button id="arabMinus" type="button" aria-label="Perkecil teks Arab">A−</button>
+        <button id="arabPlus" type="button" aria-label="Perbesar teks Arab">A+</button>
+        <button id="themeBtn" type="button">Tema: otomatis</button>
+        <button id="editBtn" type="button" class="editbtn" hidden>Mode edit: mati</button>
+        <button id="accBtn" type="button"><span id="who">Akun</span></button>
+        <span class="progress" id="progress"></span>
+      </div>
+      <div class="netline"><span id="net" class="net">…</span></div>
+    </div>
+  </header>
+  <div id="warn" class="warnbar" hidden></div>
+  <nav class="tabs" aria-label="Bagian"><div class="wrap" id="tabs" role="tablist"></div></nav>
+  <div class="wrap">
+    <div class="search" id="search"><input id="q" type="search" placeholder="Cari…" aria-label="Cari"></div>
+    <main id="view"></main>
+    <footer id="foot"></footer>
+  </div>
+</div>
+
+<div id="toast" class="toast" hidden role="status"></div>
+<dialog id="dlg"><div class="inner"></div></dialog>
+<noscript><p style="padding:16px">Aplikasi ini membutuhkan JavaScript.</p></noscript>
+<script src="data/users.js"></script>
+<script src="data/content.js"></script>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

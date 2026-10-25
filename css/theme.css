@@ -1,0 +1,63 @@
+/* =========================================================
+   TEMA — ubah warna, font, dan ukuran di bagian ini saja.
+   Semua tampilan memakai variabel di bawah (lihat style.css).
+   ========================================================= */
+
+:root {
+  /* Warna utama */
+  --accent:        #1f6b45;   /* hijau: tombol, judul, tab aktif */
+  --accent-strong: #154d31;
+  --accent-soft:   #e3f1e8;   /* latar lembut hijau */
+  --gold:          #b8892b;   /* emas: penanda rukun/penting */
+  --gold-soft:     #fbf1d9;
+
+  /* Latar dan teks */
+  --bg:       #f6f4ee;
+  --surface:  #ffffff;
+  --text:     #1d2a24;
+  --muted:    #5d6b64;
+  --border:   #dcd8cb;
+
+  /* Bentuk */
+  --radius:   14px;
+  --shadow:   0 1px 2px rgba(0,0,0,.06), 0 4px 14px rgba(0,0,0,.05);
+
+  /* Font */
+  --font-body:   system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-arab:   "Amiri", "Scheherazade New", "Noto Naskh Arabic", "Traditional Arabic", "Geeza Pro", serif;
+  --font-size:   16px;        /* ukuran dasar teks Latin */
+  --arab-size:   1.9rem;      /* ukuran awal teks Arab (tombol A+/A- mengubahnya) */
+
+  /* Lebar konten maksimum */
+  --max-width: 860px;
+}
+
+/* Mode gelap (otomatis mengikuti perangkat, atau lewat tombol tema) */
+:root[data-theme="dark"] {
+  --accent:        #6fcf97;
+  --accent-strong: #9be3bb;
+  --accent-soft:   #1c3328;
+  --gold:          #e0b458;
+  --gold-soft:     #3a2f14;
+  --bg:       #121815;
+  --surface:  #1a221e;
+  --text:     #e8eee9;
+  --muted:    #9fb0a6;
+  --border:   #2d3a33;
+  --shadow:   0 1px 2px rgba(0,0,0,.4);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --accent:        #6fcf97;
+    --accent-strong: #9be3bb;
+    --accent-soft:   #1c3328;
+    --gold:          #e0b458;
+    --gold-soft:     #3a2f14;
+    --bg:       #121815;
+    --surface:  #1a221e;
+    --text:     #e8eee9;
+    --muted:    #9fb0a6;
+    --border:   #2d3a33;
+    --shadow:   0 1px 2px rgba(0,0,0,.4);
+  }
+}
