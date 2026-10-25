@@ -9,7 +9,7 @@ window.UMRAH_DATA = {
     "subjudul": "Itinerary 14 hari · Makkah (Hari 1–8) · Madinah (Hari 9–14)",
     "catatanKaki": "Disusun dari Buku Tuntunan Manasik Haji dan Umrah (Kemenhaj) dan pengetahuan umum. Teks Arab mohon dicek dengan buku/ustadz sebelum dihafal.",
     "kontakAdmin": "081355248422",
-    "versi": 2,
+    "versi": 3,
     "subjudulOtomatis": true
   },
   "tabs": [
@@ -1946,11 +1946,11 @@ window.UMRAH_DATA = {
         "aktif": true,
         "nama": "Q.S. Al-Baqarah Ayat 196",
         "arab": "وَأَتِمُّوا الْحَجَّ وَالْعُمْرَةَ لِلَّهِ",
-        "arti": "Dan sempurnakanlah ibadah haji dan umrah karena Alla"
+        "arti": "Dan sempurnakanlah ibadah haji dan umrah karena Allah"
       },
       {
         "id": "s-baqarah-201",
-        "aktif": true,
+        "aktif": false,
         "nama": "Q.S. Al-Baqarah [2]: 201",
         "arab": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
         "arti": "Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, dan lindungilah kami dari azab neraka."
