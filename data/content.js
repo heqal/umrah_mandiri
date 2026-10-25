@@ -1,25 +1,15 @@
 /*
- * ISI APLIKASI — edit file ini untuk mengubah isi (teks, doa, jadwal),
- * ATAU kelola langsung lewat aplikasi (login admin → Mode edit) lalu klik "Unduh content.js" di tab Admin
- * dan ganti file ini dengan hasil unduhan, kemudian upload ulang ke Netlify.
- * Format: JSON biasa. Tanda kutip ganda " wajib; hati-hati dengan koma di akhir baris.
- *
- * meta.versi            : naik otomatis saat Anda mengunduh dari aplikasi (jangan diturunkan).
- * meta.subjudulOtomatis : true = subjudul dihitung dari daftar hari (jumlah hari + kota); false = pakai meta.subjudul.
- * meta.kontakAdmin      : nomor WhatsApp admin (format 62812xxxxxxx) untuk tombol "Kirim permintaan doa".
- * hariInfo + itinerary  : daftar hari ("Hari 1", "Hari 2", ...) dan langkah-langkahnya. Setiap langkah punya "id" unik.
- * doaPribadi            : doa pilihan per pengguna ("untuk": username, atau "*" untuk semua pengguna).
- * header.surah          : surah/ayat yang tampil di header (aktif: true/false).
- * Kode bacaan seperti B8 pada kolom "bacaan"/"doa" otomatis menjadi tombol yang membuka bacaan terkait.
- * Kategori filter: "hukum" ("wajib"/"sunnah") dan "lokasiKat" (harus sama persis dengan isi "kategoriLokasi").
+ * ISI APLIKASI — dihasilkan dari tab Admin (Unduh content.js).
+ * Ganti file data/content.js dengan file ini lalu upload ulang ke Netlify.
+ * Penjelasan kolom: lihat README.md.
  */
 window.UMRAH_DATA = {
   "meta": {
-    "judul": "Panduan Umrah Mandiri",
+    "judul": "Panduan Umrah Mandiri Mappiare Family",
     "subjudul": "Itinerary 14 hari · Makkah (Hari 1–8) · Madinah (Hari 9–14)",
     "catatanKaki": "Disusun dari Buku Tuntunan Manasik Haji dan Umrah (Kemenhaj) dan pengetahuan umum. Teks Arab mohon dicek dengan buku/ustadz sebelum dihafal.",
-    "kontakAdmin": "",
-    "versi": 1,
+    "kontakAdmin": "081355248422",
+    "versi": 2,
     "subjudulOtomatis": true
   },
   "tabs": [
@@ -1952,11 +1942,11 @@ window.UMRAH_DATA = {
   "header": {
     "surah": [
       {
-        "id": "s-ikhlas",
+        "id": "smvo23pu7f3w",
         "aktif": true,
-        "nama": "Q.S. Al-Ikhlas [112]: 1–4",
-        "arab": "قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
-        "arti": "Katakanlah, \"Dialah Allah Yang Maha Esa. Allah tempat bergantung segala sesuatu. Dia tidak beranak dan tidak pula diperanakkan. Dan tidak ada sesuatu yang setara dengan-Nya.\""
+        "nama": "Q.S. Al-Baqarah Ayat 196",
+        "arab": "وَأَتِمُّوا الْحَجَّ وَالْعُمْرَةَ لِلَّهِ",
+        "arti": "Dan sempurnakanlah ibadah haji dan umrah karena Alla"
       },
       {
         "id": "s-baqarah-201",
@@ -1964,6 +1954,13 @@ window.UMRAH_DATA = {
         "nama": "Q.S. Al-Baqarah [2]: 201",
         "arab": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
         "arti": "Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, dan lindungilah kami dari azab neraka."
+      },
+      {
+        "id": "s-ikhlas",
+        "aktif": false,
+        "nama": "Q.S. Al-Ikhlas [112]: 1–4",
+        "arab": "قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+        "arti": "Katakanlah, \"Dialah Allah Yang Maha Esa. Allah tempat bergantung segala sesuatu. Dia tidak beranak dan tidak pula diperanakkan. Dan tidak ada sesuatu yang setara dengan-Nya.\""
       }
     ]
   }
