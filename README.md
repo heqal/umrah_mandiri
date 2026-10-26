@@ -1,6 +1,6 @@
 # Panduan Umrah Mandiri (webapp statis, offline, dengan login)
 
-Tanpa build dan tanpa server. Upload ke Netlify: ekstrak ZIP, buka https://app.netlify.com/drop, seret foldernya.
+Tanpa build dan tanpa server. Upload ke github.com , seret foldernya.
 
 ## Akun bawaan (WAJIB diganti)
 | Username | Password   | Peran |
@@ -18,7 +18,7 @@ Saat login pertama, aplikasi meminta password diganti.
 5. Data Anda (centang progres, tema, sesi login) disimpan di **localStorage** perangkat, jadi tidak butuh internet.
 6. Login pun jalan offline karena daftar pengguna ikut tersimpan di cache dan pengecekan password dilakukan di browser.
 
-Syarat: buka sekali lewat alamat https Netlify (service worker tidak aktif jika file dibuka langsung dari folder), dan jangan membersihkan data situs. **Buka dan tunggu lencana "siap offline" sebelum berangkat.**
+Syarat: buka sekali lewat alamat https Github (service worker tidak aktif jika file dibuka langsung dari folder), dan jangan membersihkan data situs. **Buka dan tunggu lencana "siap offline" sebelum berangkat.**
 
 ## Login dan Dashboard Admin
 - **User**: melihat semua tab panduan.
@@ -31,12 +31,12 @@ Syarat: buka sekali lewat alamat https Netlify (service worker tidak aktif jika 
 Aplikasi ini statis, jadi tidak ada database bersama. Perubahan admin tersimpan di perangkat admin. Untuk menyebarkannya:
 1. Dashboard Admin → **Unduh users.js**.
 2. Ganti file `data/users.js` di folder dengan hasil unduhan.
-3. Upload ulang folder ke Netlify. Perangkat lain menerima daftar baru saat berikutnya online.
+3. Upload ulang folder ke Github. Perangkat lain menerima daftar baru saat berikutnya online.
 
 Catatan: pengguna yang mengganti password sendiri hanya mengubahnya di perangkatnya; admin perlu mengunggah users.js terbaru agar berlaku di perangkat lain.
 
 ### Batasan keamanan (jujur)
-Login di sini adalah **pembatas akses di sisi browser**, bukan keamanan tingkat server. Siapa pun yang tahu alamat situs dan membuka file `data/content.js` langsung dapat membaca isinya, dan pembatasan bisa dilewati oleh yang paham teknis. Cukup untuk membatasi pemakaian awam (kelompok jamaah, keluarga). Bila perlu perlindungan sungguhan: pakai fitur *password protection* Netlify (paket berbayar), atau tambahkan backend (mis. Netlify Functions, Supabase, Firebase) untuk autentikasi dan data pengguna bersama.
+Login di sini adalah **pembatas akses di sisi browser**, bukan keamanan tingkat server. Siapa pun yang tahu alamat situs dan membuka file `data/content.js` langsung dapat membaca isinya, dan pembatasan bisa dilewati oleh yang paham teknis. Cukup untuk membatasi pemakaian awam (kelompok jamaah, keluarga). Bila perlu perlindungan sungguhan: pakai fitur *password protection* Github (paket berbayar), atau tambahkan backend (mis. Netlify Functions, Supabase, Firebase) untuk autentikasi dan data pengguna bersama.
 
 ## Fitur admin v3: kelola isi langsung dari aplikasi
 
@@ -48,7 +48,7 @@ Login sebagai admin, lalu tekan **Mode edit** di header (muncul tombol Ubah/Hapu
 - **Surah di header**: tampil di samping judul dan subjudul. Admin menambah, mengubah, menonaktifkan, menghapus, mengurutkan di tab Admin (Surah di header). Bila lebih dari satu, pengguna menggeser dengan tombol ‹ ›.
 
 ### Agar perubahan konten berlaku di semua perangkat
-Perubahan tersimpan di browser admin. Di tab Admin klik **Unduh content.js**, ganti `data/content.js`, lalu upload ulang folder ke Netlify. Perangkat lain menerima pembaruan otomatis (toast "Muat ulang"). Doa pribadi di `content.js` bersifat publik bagi yang bisa membuka alamat situs, jadi jangan menulis hal rahasia.
+Perubahan tersimpan di browser admin. Di tab Admin klik **Unduh content.js**, ganti `data/content.js`, lalu upload ulang folder ke Github. Perangkat lain menerima pembaruan otomatis (toast "Muat ulang"). Doa pribadi di `content.js` bersifat publik bagi yang bisa membuka alamat situs, jadi jangan menulis hal rahasia.
 
 ## Mengedit isi dan tema
 - Isi: `data/content.js` (itinerary, bacaan, shalat, lokasi, rukun, catatan, daftar kategori lokasi).
@@ -69,5 +69,5 @@ js/auth.js
 js/app.js               tampilan, filter, dashboard admin
 sw.js                   cache offline
 manifest.webmanifest    pasang sebagai aplikasi
-_headers                aturan cache Netlify
+_headers                aturan cache cloudflare
 ```
